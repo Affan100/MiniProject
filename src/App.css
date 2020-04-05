@@ -1,6 +1,5 @@
 .App {
   text-align: center;
-  
 }
 
 .App-logo {
@@ -37,8 +36,17 @@
     transform: rotate(360deg);
   }
 }
-.container{
+.layer{
+  display: flex;
+  list-style: none;
+  margin-top: 20px;
+}
+.outline-primary{
+  display: flex;
   align-items: center;
-  justify-content: center;
-  
+}
+.topic{
+    justify-content: center;
+    align-items: auto;
+    background-color: blanchedalmond;
 }

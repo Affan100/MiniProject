@@ -1,0 +1,49 @@
+li{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 180px;
+    height: 200px;
+    margin: 0 16px 16px 0;
+    box-shadow: 0 0 6px 0 rgba(0,0,0,0.15);
+}
+.container{
+    display: flex;
+    flex-direction: row;
+}
+.id{
+    position: absolute;
+    right: 4px;
+    top: 2px;
+}
+
+.name{
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    flex: 0.5;
+}
+button{
+    text-align: center;
+    width: 100px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    background-color:#263238;
+    color: white;
+    border-radius: 10%;
+
+}
+.btn1{
+  background-color: #4285F4;
+}
+.btn2{
+  background-color: #ff4444;
+}
+.btn1 > div:hover {
+  
+    background-color: rgb(255, 220, 154);
+
+}
