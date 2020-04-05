@@ -78,7 +78,7 @@ function App() {
     <div >
       <Home />
       <h1>AFFORFUN</h1>
-      <h4>Affan Pathan 6035512016</h4>
+      <h4></h4>
       <input type='text' name='name' onChange={(e) => { setName(e.target.value) }} />
       <div>
         <Button variant="outline-primary" onClick={addTrip}>Submit</Button>
