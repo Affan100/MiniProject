@@ -1,19 +1,26 @@
 import React, { Component } from 'react';
-import Facebook from 'react-facebook-login'
+import FacebookLogin from 'react-facebook-login';
 
 export default class Facebook extends Component {
-
     state = {
         isLoggedIn: false,
         userID: '',
         name: '',
         email: '',
-        picture: '',
-
+        picture: ''
     }
 
     responseFacebook = response => {
-        console.log(response)
+        // console.log(response)
+
+        this.setState({
+            isLoggedIn: true,
+            userID: response.userID,
+            name: response.name,
+            email: response.email,
+            picture: response.picture.data.url
+        });
+
     }
     componentClicked = () => console.log('clikced');
 
@@ -21,18 +28,30 @@ export default class Facebook extends Component {
         let fbContent;
 
         if (this.state.isLoggedIn) {
-            fbContent = null;
+            fbContent = (
+                <div style={{
+                    width: '400px',
+                    margin: 'auto',
+                    background: '#f4f4f4',
+                    padding: '20px'
+                }}>
+                    <img src={this.state.picture} alt={this.state.name} />
+                    <h2>Welcome {this.state.name}</h2>
+                    Email: {this.state.email}
+                </div>
+            );
         }
         else {
-            fbContent = (<FacebookLogin
-                appId="1086694998378024"
-                autoLoad={true}
-                fields="name,email,picture"
-                onClick={this.componentClicked}
-                callback={this.responseFacebook}
-                cssClass="my-facebook-button-class"
-                icon="fa-facebook"
-            />)
+            fbContent = (
+                <FacebookLogin
+                    appId="1086694998378024"
+                    autoLoad={true}
+                    fields="name,email,picture"
+                    onClick={this.componentClicked}
+                    callback={this.responseFacebook}
+                    cssClass="fbbtn"
+                    icon=""
+                />)
         }
 
         return (

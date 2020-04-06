@@ -7,7 +7,7 @@ export default (props) => {
     const { id, name } = trip
 
     return (
-        <li >
+        <div className='li' >
             <div className='id'>
                 {id}
             </div>
@@ -18,7 +18,7 @@ export default (props) => {
                 <button className='btn1' onClick={() => deleteTrip(id)}>Delete</button>
                 <button className='btn2' onClick={() => editTrip(id)}>Edit</button>
             </div>
-        </li>
+        </div>
     )
 }
 

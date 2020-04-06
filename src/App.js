@@ -3,12 +3,15 @@ import './App.css';
 import { firestore } from './index';
 import Trip from './Trip';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button, Carousel } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 import Home from './component/Home';
 
+// Top
+import Auth from './component/Auth';
+import Topbar from './component/Topbar';
 
 
-function App() {
+const App = () => {
 
   const [trips, setTrip] = useState([
 
@@ -75,16 +78,25 @@ function App() {
 
 
   return (
-    <div >
+    <div>
+      <Topbar />
       <Home />
-      <h1>AFFORFUN</h1>
-      <h4></h4>
-      <input type='text' name='name' onChange={(e) => { setName(e.target.value) }} />
-      <div>
-        <Button variant="outline-primary" onClick={addTrip}>Submit</Button>
-        <Button variant="outline-primary" onClick={addTrip}>AddImage</Button>
+
+      <div className="input">
+        <Auth />
+        <h3>Add Trip</h3>
+        <input type='text' name='name' onChange={(e) => { setName(e.target.value) }} />
+
+
+        <div >
+          <Button variant="outline-primary" onClick={addTrip}>Add</Button>
+          <Button variant="outline-primary" onClick={addTrip}>Image</Button>
+        </div>
+
+        <div className='layer'>{renderTrip()}</div>
       </div>
-      <ul className='layer'>{renderTrip()}</ul>
+
+
     </div>
   );
 }

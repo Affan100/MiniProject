@@ -9,19 +9,8 @@ const Home = () => {
             <Carousel.Item>
                 <img
                     className="d-block w-100"
-                    src="https://grasshoppercdn.s3.amazonaws.com/wp-content/uploads/2019/06/Destination-Japan-Slider-Past-Meets-future-1024x683.jpg"
-                    height="720"
-                    alt="First slide" />
-                <Carousel.Caption>
-                    <h3>Japan Trip</h3>
-                    <p>Shinto shrines are places of worship and the dwellings of the kami.</p>
-                </Carousel.Caption>
-            </Carousel.Item>
-            <Carousel.Item>
-                <img
-                    className="d-block w-100"
                     src="https://static.asiawebdirect.com/m/phuket/portals/thaiwave-com/homepage/pagePropertiesOgImage/thailand.jpg.jpg"
-                    height="720"
+                    height="650"
                     alt="Second slide" />
 
                 <Carousel.Caption>
@@ -29,11 +18,24 @@ const Home = () => {
                     <p>Arrived Bangkok. Had no problems finding where to get cab on the first floor, no problems with the cab driver.</p>
                 </Carousel.Caption>
             </Carousel.Item>
+
             <Carousel.Item>
                 <img
                     className="d-block w-100"
-                    src="https://s3-ap-southeast-1.amazonaws.com/gettgo-web-production/home/jindatheme/gettgo_web_production/releases/20180306035135/public/ckeditor_assets/pictures/225/content_15160.png"
-                    height="720"
+                    src="https://grasshoppercdn.s3.amazonaws.com/wp-content/uploads/2019/06/Destination-Japan-Slider-Past-Meets-future-1024x683.jpg"
+                    height="650"
+                    alt="First slide" />
+                <Carousel.Caption>
+                    <h3>Japan Trip</h3>
+                    <p>Shinto shrines are places of worship and the dwellings of the kami.</p>
+                </Carousel.Caption>
+            </Carousel.Item>
+
+            <Carousel.Item>
+                <img
+                    className="d-block w-100"
+                    src="https://www.jatiewpainai.com/wp-content/uploads/2019/11/IMG_1865-2.jpg"
+                    height="650"
                     alt="Third slide" />
 
                 <Carousel.Caption>
