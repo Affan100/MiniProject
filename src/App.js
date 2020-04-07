@@ -5,10 +5,19 @@ import Trip from './Trip';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button } from 'react-bootstrap';
 import Home from './component/Home';
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
+
+
+//Auth Facebook
+import Auth from './component/Auth';
 
 // Top
-import Auth from './component/Auth';
 import Topbar from './component/Topbar';
+
+//Router
+import Notpage from './pages/Notpage';
+import MainPage from './pages';
+
 
 
 const App = () => {
@@ -76,10 +85,9 @@ const App = () => {
     firestore.collection('trip').doc(id + ('')).set({ id, name })
   }
 
-
   return (
     <div>
-      <Topbar />
+      {/* <Topbar />
       <Home />
 
       <div className="input">
@@ -94,8 +102,13 @@ const App = () => {
         </div>
 
         <div className='layer'>{renderTrip()}</div>
-      </div>
-
+      </div> */}
+      <Router>
+        <Switch>
+          <Route exact path="/" component={MainPage} />
+          <Route exact path="/404" component={Notpage} />
+        </Switch>
+      </Router>
 
     </div>
   );
