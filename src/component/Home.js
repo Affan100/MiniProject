@@ -22,12 +22,12 @@ const Home = () => {
             <Carousel.Item>
                 <img
                     className="d-block w-100"
-                    src="https://grasshoppercdn.s3.amazonaws.com/wp-content/uploads/2019/06/Destination-Japan-Slider-Past-Meets-future-1024x683.jpg"
+                    src="https://www.planet-ride.com/wp-content/uploads/2017/03/ka2.jpg"
                     height="650"
                     alt="First slide" />
                 <Carousel.Caption>
-                    <h3>Japan Trip</h3>
-                    <p>Shinto shrines are places of worship and the dwellings of the kami.</p>
+                    <h3>Pakistan Trip</h3>
+                    <p>In 2019, the authorities tightened their control over freedom of expression.</p>
                 </Carousel.Caption>
             </Carousel.Item>
 

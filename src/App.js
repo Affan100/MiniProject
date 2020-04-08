@@ -4,7 +4,7 @@ import { firestore } from './index';
 import Trip from './Trip';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button } from 'react-bootstrap';
-import Home from './component/Home';
+// import Home from './component/Home';
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 
 
@@ -15,83 +15,28 @@ import Auth from './component/Auth';
 import Topbar from './component/Topbar';
 
 //Router
-import Notpage from './pages/Notpage';
-import MainPage from './pages';
-
+import HomePage from './component/HomePage';
+import link from './component/Link';
 
 
 const App = () => {
 
-  const [trips, setTrip] = useState([
-
-    {
-      id: 1, name: 'Pakistan'
-    },
-    {
-      id: 2, name: 'Thailand'
-    }
-
-  ])
-
-  const [name, setName] = useState('');
-
-  useEffect(() => {
-    retriveData()
-  }, [])
-
-
-  const retriveData = () => {
-
-    firestore.collection('trip').onSnapshot((snapshot) => {
-      console.log(snapshot.docs)
-      const mytrip = snapshot.docs.map(d => {
-        const { id, name } = d.data();
-        console.log(id, name)
-        return { id, name }
-      })
-      setTrip(mytrip)
-    })
-  }
-
-  const deleteTrip = (id) => {
-    firestore.collection('trip').doc(id + '').delete()
-  }
-
-  const editTrip = (id) => {
-    firestore.collection('trip').doc(id + '').set({ id, name })
-  }
-
-
-  const renderTrip = () => {
-    if (trips && trips.length)
-      return (
-        trips.map((trips, index) => {
-          return (
-            <Trip key={index} trip={trips}
-              deleteTrip={deleteTrip}
-              editTrip={editTrip}
-
-            />
-          )
-        })
-      )
-    else
-      return (<li>No Trip</li>)
-
-  }
-
-  const addTrip = () => {
-    let id = trips.length > 0 ? +trips[trips.length - 1].id + 1 : 1;
-    firestore.collection('trip').doc(id + ('')).set({ id, name })
-  }
 
   return (
     <div>
-      {/* <Topbar />
-      <Home />
+      <Router>
+        <Switch>
+          <Route path="/HomePage" component={HomePage} />
+          <Route path="/link" component={link} />
+          <Topbar />
+        </Switch>
+      </Router>
 
-      <div className="input">
-        <Auth />
+      {/* <Topbar />
+      <Home /> */}
+      {/* <Auth /> */}
+      {/* <div className="input">
+        
         <h3>Add Trip</h3>
         <input type='text' name='name' onChange={(e) => { setName(e.target.value) }} />
 
@@ -103,12 +48,9 @@ const App = () => {
 
         <div className='layer'>{renderTrip()}</div>
       </div> */}
-      <Router>
-        <Switch>
-          <Route exact path="/" component={MainPage} />
-          <Route exact path="/404" component={Notpage} />
-        </Switch>
-      </Router>
+
+
+
 
     </div>
   );

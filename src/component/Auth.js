@@ -1,9 +1,10 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 import firebase from 'firebase';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button } from 'react-bootstrap';
 import './Auth.css';
+import Home from './Home';
 
 
 firebase.initializeApp({
@@ -13,10 +14,12 @@ firebase.initializeApp({
 })
 
 
-class Auth extends Component {
-    state = { isSignedIn: false }
+// class Auth extends Component {
+const Auth = props => {
 
-    uiConfig = {
+    const [isSignedIn, setIsSignedIn] = useState(false);
+
+    const uiConfig = {
         signInFlow: 'popup',
         signInOptions: [
             firebase.auth.FacebookAuthProvider.PROVIDER_ID
@@ -24,48 +27,46 @@ class Auth extends Component {
         callback: {
             signInSuccessUrl: () => false
         }
-    }
+    };
 
-    componentDidMount = () => {
+    useEffect(() => {
 
         firebase.auth().onAuthStateChanged(user => {
-            this.setState({ isSignedIn: !!user })
+            setIsSignedIn(!!user)
         })
-    }
+    })
 
-    render() {
-        return (
-            <div className='login'>
-                {this.state.isSignedIn ?
-                    (<span>
 
-                        <div style={{
-                            width: '400px',
-                            margin: 'auto',
-                            background: '#fafafa',
-                            padding: '20px'
-                        }}>
-                            <h3>Welcome: {firebase.auth().currentUser.displayName}</h3>
-                            <img alt='profile picture' src={firebase.auth().currentUser.photoURL} />
-                            <div>Email: {firebase.auth().currentUser.email}</div>
+    return (
+        <div className='login'>
+            {isSignedIn ?
+                (<span>
 
-                            <div className='logout'>
-                                <Button variant="danger" onClick={() => firebase.auth().signOut()}>Logout</Button>
-                            </div>
+                    <div>
+                        <h3>Welcome: {firebase.auth().currentUser.displayName}</h3>
+                        <img alt='profile picture' src={firebase.auth().currentUser.photoURL} />
+                        <div>Email: {firebase.auth().currentUser.email}</div>
+
+                        <Home />
+
+                        <div className='logout'>
+                            <Button variant="danger" onClick={() => firebase.auth().signOut()}>Logout</Button>
                         </div>
+                    </div>
 
 
-                    </span>)
+                </span>)
 
-                    :
+                :
 
-                    (<StyledFirebaseAuth
-                        uiConfig={this.uiConfig}
-                        firebaseAuth={firebase.auth()}
-                    />)
-                }
-            </div>
-        );
-    }
+                (<StyledFirebaseAuth
+                    uiConfig={uiConfig}
+                    firebaseAuth={firebase.auth()}
+                />)
+            }
+        </div>
+    );
 
-} export default Auth;
+
+}
+export default Auth;
