@@ -1,0 +1,18 @@
+
+.ADD{
+    padding: 20px;
+    margin-top: 10px;
+    width: 430px;
+    background-color: #fafafa;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.15);
+}
+
+.inputfrom{
+    display: flex;
+}
+.layer{
+    width: 500px;
+}
+.details{
+    margin-left: 30px;
+}

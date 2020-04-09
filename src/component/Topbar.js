@@ -29,8 +29,8 @@ const Topbar = () => {
                         </li>
                         <li class="nav-item">
 
-                            <Link to='/Link'>
-                                <a class="nav-link" href="#">Link</a>
+                            <Link to='/App_Your_Trip'>
+                                <a class="nav-link" href="#">Add Your Trip</a>
                             </Link>
 
                         </li>

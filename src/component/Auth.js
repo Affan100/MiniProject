@@ -40,8 +40,8 @@ const Auth = props => {
     return (
         <div className='login'>
             {isSignedIn ?
-                (<span>
 
+                (<span>
                     <div>
                         <h3>Welcome: {firebase.auth().currentUser.displayName}</h3>
                         <img alt='profile picture' src={firebase.auth().currentUser.photoURL} />
@@ -53,8 +53,6 @@ const Auth = props => {
                             <Button variant="danger" onClick={() => firebase.auth().signOut()}>Logout</Button>
                         </div>
                     </div>
-
-
                 </span>)
 
                 :
