@@ -6,15 +6,14 @@ import { Button } from 'react-bootstrap';
 export default (props) => {
 
     const { trip, editTrip, deleteTrip } = props
-    const { id, location, detail } = trip
+    const { id, location, detail, imgUrl, link } = trip
+
 
     return (
         <div className='li' >
-            <div className='id'>
-                {id}
-            </div>
+
             <div className='url'>
-                Photo
+                <img src={imgUrl} width='350' height='230' />
             </div>
             <div className='name'>
                 {location} :
@@ -23,10 +22,11 @@ export default (props) => {
                 {detail}
             </div>
             <div className='container'>
-                <Button className='dele' variant="outline-danger" onClick={() => deleteTrip(id)}>Delete</Button>
                 <Button className='edit' variant="outline-primary" onClick={() => editTrip(id)}>Edit</Button>
+                <Button className='dele' variant="outline-danger" onClick={() => deleteTrip(id)}>Delete</Button>
                 <div className='link'>
-                    <Button variant="outline-warning">Link</Button>
+                    <Button href={link} variant="outline-warning">Link</Button>
+
                 </div>
             </div>
         </div>

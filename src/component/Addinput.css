@@ -7,6 +7,13 @@
     box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.15);
 }
 
+.font{
+    margin-left: 35%;
+}
+.topic{
+    margin-bottom: 10px;
+}
+
 .inputfrom{
     display: flex;
 }

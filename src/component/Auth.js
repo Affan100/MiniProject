@@ -4,7 +4,7 @@ import firebase from 'firebase';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button } from 'react-bootstrap';
 import './Auth.css';
-import Home from './Home';
+// import Home from './Home';
 
 
 firebase.initializeApp({
@@ -39,21 +39,19 @@ const Auth = props => {
 
     return (
         <div className='login'>
+
             {isSignedIn ?
-
-                (<span>
+                (<div>
                     <div>
-                        <h3>Welcome: {firebase.auth().currentUser.displayName}</h3>
-                        <img alt='profile picture' src={firebase.auth().currentUser.photoURL} />
-                        <div>Email: {firebase.auth().currentUser.email}</div>
+                        <img alt='profile picture' className='img' width='50px' src={firebase.auth().currentUser.photoURL} />
+                        {/* <span className='email'>Welcome: {firebase.auth().currentUser.displayName}</span> */}
+                        <span className='email'>{firebase.auth().currentUser.email}</span>
 
-                        <Home />
-
-                        <div className='logout'>
+                        <span className='logout'>
                             <Button variant="danger" onClick={() => firebase.auth().signOut()}>Logout</Button>
-                        </div>
+                        </span>
                     </div>
-                </span>)
+                </div>)
 
                 :
 
@@ -62,7 +60,7 @@ const Auth = props => {
                     firebaseAuth={firebase.auth()}
                 />)
             }
-        </div>
+        </div >
     );
 
 

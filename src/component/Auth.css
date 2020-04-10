@@ -1,4 +1,22 @@
+.login{
+
+}
+
 .logout{
     margin: auto;
-    margin-top: 10px;
+    margin-left: 10px;
+}
+.email{
+    margin-left: 5px;
+    color: lavender;
+}
+.img{
+    border-radius: 50%;
+}
+.imgpage{
+    border-radius: 10%;
+    background-color: lavender;
+}
+.tap{
+ margin-left: 15px;
 }

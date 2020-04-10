@@ -14,8 +14,13 @@
 
 
 .edit{
+   
+}
+.dele{
     margin-left: 10px;
 }
+
+
 .link{
     margin-left: 80px;
 }
@@ -27,12 +32,7 @@
     top: 2px;
 }
 .url{
-    padding: 100px;
-    font-size: 25px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-bottom: 20px;
+    
 }
 .name{
     margin-left: 20px;

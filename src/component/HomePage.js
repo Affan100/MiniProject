@@ -1,14 +1,14 @@
 import React from 'react';
 import Home from './Home';
 import Topbar from './Topbar';
-import Auth from './Auth';
+// import Auth from './Auth';
 
 const HomePage = () => {
     return (
         <div>
             <Topbar />
             <Home />
-            <Auth />
+            {/* <Auth /> */}
         </div>
     );
 }

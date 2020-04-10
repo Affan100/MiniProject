@@ -3,6 +3,8 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 // import Home from './component/Home';
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
+import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
+import firebase from 'firebase';
 
 
 //Auth Facebook
@@ -18,9 +20,12 @@ import addinput from './component/Addinput';
 
 const App = () => {
 
+  const [main, setMain] = useState(false);
+
 
   return (
     <div>
+
       <Router>
         <Switch>
           <Route path="/HomePage" component={HomePage} />

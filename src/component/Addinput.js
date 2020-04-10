@@ -21,6 +21,8 @@ const Addinput = () => {
 
     const [location, setLocation] = useState('');
     const [detail, setDetail] = useState('');
+    const [imgUrl, setImgUrl] = useState('');
+    const [link, setLink] = useState('');
 
     useEffect(() => {
         retriveData()
@@ -32,9 +34,9 @@ const Addinput = () => {
         firestore.collection('trip').onSnapshot((snapshot) => {
             console.log(snapshot.docs)
             const mytrip = snapshot.docs.map(d => {
-                const { id, location, detail } = d.data();
-                console.log(id, location, detail)
-                return { id, location, detail }
+                const { id, location, detail, imgUrl, link } = d.data();
+                console.log(id, location, detail, imgUrl, link)
+                return { id, location, detail, imgUrl, link }
             })
             setTrip(mytrip)
         })
@@ -45,7 +47,7 @@ const Addinput = () => {
     }
 
     const editTrip = (id) => {
-        firestore.collection('trip').doc(id + '').set({ id, location, detail })
+        firestore.collection('trip').doc(id + '').set({ id, location, detail, imgUrl, link })
     }
 
 
@@ -69,7 +71,7 @@ const Addinput = () => {
 
     const addTrip = () => {
         let id = trips.length > 0 ? +trips[trips.length - 1].id + 1 : 1;
-        firestore.collection('trip').doc(id + ('')).set({ id, location, detail })
+        firestore.collection('trip').doc(id + ('')).set({ id, location, detail, imgUrl, link })
     }
 
     return (
@@ -77,9 +79,60 @@ const Addinput = () => {
             <Topbar />
             <div >
                 <div className="ADD">
-                    <h3>Add Trip</h3>
+
+                    <div className='topic'><InputGroup.Text > <div className='font'><h3>Add Trip</h3></div></InputGroup.Text></div>
 
                     <tr>
+                        Location :
+                        <td>
+                            <FormControl
+                                placeholder="Location"
+                                aria-label="Location"
+                                aria-describedby="basic-addon1"
+                                onChange={(e) => { setLocation(e.target.value) }} />
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <InputGroup.Prepend >
+                            URL Image :
+                        </InputGroup.Prepend>
+                        <td>
+                            <FormControl
+                                placeholder="URL"
+                                aria-label="URL"
+                                aria-describedby="basic-addon1"
+                                onChange={(e) => { setImgUrl(e.target.value) }} />
+                        </td>
+                    </tr>
+
+                    <tr>
+                        Airlines :
+                        <td>
+                            <FormControl
+                                placeholder="Link"
+                                aria-label="Airlines"
+                                aria-describedby="basic-addon1"
+                                onChange={(e) => setLink(e.target.value)} />
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <InputGroup.Prepend>
+                            Detail :
+                        </InputGroup.Prepend>
+                        <td className='details'>
+                            <FormControl
+                                placeholder='Detail...'
+                                as="textarea"
+                                aria-label="With textarea"
+                                onChange={(e) => { setDetail(e.target.value) }} />
+                        </td>
+                    </tr>
+
+
+
+                    {/* <tr>
                         URL Image:<td><input type='text' name='name' onChange={(e) => { setLocation(e.target.value) }} /></td>
                     </tr>
                     <tr>
@@ -88,6 +141,12 @@ const Addinput = () => {
                     <tr>
                         Detail :<td><input type='text' onChange={(e) => { setDetail(e.target.value) }} /></td>
                     </tr>
+                    <tr>
+                        Airlines    :<td><input type='text' name='name' onChange={(e) => { setLocation(e.target.value) }} /></td>
+                    </tr> */}
+
+
+
 
 
                     <div >
