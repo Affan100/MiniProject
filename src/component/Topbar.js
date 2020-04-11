@@ -19,13 +19,16 @@ const Topbar = () => {
                 <div class="collapse navbar-collapse" id="navbarSupportedContent" >
                     <ul class="navbar-nav mr-auto">
 
-                        <li class="nav-item active">
-                            <div className="tap">
-                                <Link to='/HomePage'>
-                                    <a class="nav-link nav-item active" href="HomePage">Home <span class="sr-only">(current)</span></a>
-                                </Link>
-                            </div>
-                        </li>
+                        <nav variant="pills" defaultActiveKey="/HomePage">
+                            <li class="nav-item active">
+                                <div className="tap">
+                                    <Link to='/HomePage'>
+                                        {/* <a class="nav-link nav-item active" href="HomePage">Home <span class="sr-only">(current)</span></a> */}
+                                        <a class="flex-sm-fill text-sm-center nav-link active " href="HomePage" >Home <span class="sr-only">(current)</span></a>
+                                    </Link>
+                                </div>
+                            </li>
+                        </nav>
 
                         <li class="nav-item active">
 
@@ -34,8 +37,13 @@ const Topbar = () => {
                             </Link>
 
                         </li>
+
                         <li class="nav-item active">
-                            <a class="nav-link disabled" href="#">Link</a>
+
+                            <Link to='/Hot_Trip'>
+                                <a class="nav-link " href="Hot">Hot_trip</a>
+                            </Link>
+
                         </li>
                     </ul>
 

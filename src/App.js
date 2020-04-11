@@ -3,8 +3,8 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 // import Home from './component/Home';
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
-import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
-import firebase from 'firebase';
+// import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
+// import firebase from 'firebase';
 
 
 //Auth Facebook
@@ -16,6 +16,7 @@ import Topbar from './component/Topbar';
 //Router
 import HomePage from './component/HomePage';
 import addinput from './component/Addinput';
+import toptrip from './component/Avg';
 
 
 const App = () => {
@@ -30,6 +31,7 @@ const App = () => {
         <Switch>
           <Route path="/HomePage" component={HomePage} />
           <Route path="/App_Your_Trip" component={addinput} />
+          <Route path="/Hot" component={toptrip} />
           <Topbar />
         </Switch>
       </Router>
