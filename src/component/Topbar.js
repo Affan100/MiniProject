@@ -24,26 +24,40 @@ const Topbar = () => {
 
                             <li class="nav-item active">
                                 <div className="tap">
-                                    <Link to='/HomePage'>
-                                        {/* <a class="nav-link nav-item active" href="HomePage">Home <span class="sr-only">(current)</span></a> */}
-                                        <a class="flex-sm-fill text-sm-center nav-link active " href="HomePage" >Home <span class="sr-only">(current)</span></a>
-                                    </Link>
+                                    {/* <Link to='/HomePage'> */}
+                                    {/* <a class="nav-link nav-item active" href="HomePage">Home <span class="sr-only">(current)</span></a> */}
+                                    {/* <a class="flex-sm-fill text-sm-center nav-link active " href="HomePage" >Home <span class="sr-only">(current)</span></a>
+                                    </Link> */}
+
+
+                                    <a href='#home' class="flex-sm-fill text-sm-center nav-link active " >Home <span class="sr-only">(current)</span></a>
+
+
                                 </div>
                             </li>
                         </nav>
 
                         <div className='berM'>
                             <li class="nav-item active">
-                                <Link to='/App_Your_Trip'>
+                                {/* <Link to='/App_Your_Trip'>
                                     <a class="nav-link" href="App_Your_Trip">MoreTrip</a>
-                                </Link>
+                                </Link> */}
+
+                                <div >
+                                    <a href='#moretrip' class="nav-link active" >MoreTrip</a>
+                                </div>
 
                             </li>
                             <div className='berH'>
-                                <li class="nav-item active">
-                                    <Link to='/Hot_Trip'>
+                                <li >
+                                    {/* <Link to='/Hot_Trip'>
                                         <a class="nav-link " href="Hot">Hot_trip</a>
-                                    </Link>
+                                    </Link> */}
+
+                                    <div >
+                                        <a class="nav-link active" href="#hot">Hot_trip</a>
+                                    </div>
+
                                 </li>
                             </div>
                         </div>

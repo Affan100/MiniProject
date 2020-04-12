@@ -17,6 +17,10 @@ import addinput from './Addinput';
 import toptrip from './Avg';
 
 
+import Addinput from './Addinput';
+import Avg from './Avg';
+
+
 
 firebase.initializeApp({
     apiKey: "AIzaSyABkAvfQINIRpudOhg3Znj2UA76Ff_RIv0",
@@ -51,7 +55,7 @@ const Auth = props => {
     })
 
     return (
-        <div className='login'>
+        <div >
             {isSignedIn ?
                 (<div>
 
@@ -60,14 +64,19 @@ const Auth = props => {
                     <span className='email'>Welcome: {firebase.auth().currentUser.displayName}</span>
                     <span className='email'>{firebase.auth().currentUser.email}</span> */}
 
-                    <Router>
+                    {/* <Router>
                         <Switch>
                             <Route path="/HomePage" component={HomePage} />
                             <Route path="/App_Your_Trip" component={addinput} />
                             <Route path="/Hot" component={toptrip} />
                             <Topbar />
                         </Switch>
-                    </Router>
+                    </Router> */}
+
+
+                    <div id='home'><Home /></div>
+                    <div id='moretrip'> <Addinput /></div>
+                    <div id='hot'><Avg /></div>
 
                     <span className='logout'>
                         <Button variant="danger" onClick={() => firebase.auth().signOut()}>Logout</Button>
@@ -78,7 +87,7 @@ const Auth = props => {
 
                 :
 
-                (<div className='auth'>
+                (<div>
                     <div className='text'>Plase login</div>
                     <StyledFirebaseAuth
                         uiConfig={uiConfig}

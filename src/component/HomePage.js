@@ -6,7 +6,7 @@ import Topbar from './Topbar';
 const HomePage = () => {
     return (
         <div>
-            <Topbar />
+            {/* <Topbar /> */}
             <Home />
             {/* <Auth /> */}
         </div>

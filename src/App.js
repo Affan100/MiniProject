@@ -20,6 +20,8 @@ import HomePage from './component/HomePage';
 import addinput from './component/Addinput';
 import toptrip from './component/Avg';
 
+import Addinput from './component/Addinput';
+
 
 const App = () => {
 
@@ -32,41 +34,11 @@ const App = () => {
 
 
   return (
-    <div>
-      {/* <Router>
-        <Switch>
-          <Route path="/HomePage" component={HomePage} />
-          <Route path="/App_Your_Trip" component={addinput} />
-          <Route path="/Hot" component={toptrip} />
-          <Topbar />
-        </Switch>
-      </Router> */}
-
-      {/* <Avg imgUrl={imgUrlArray} /> */}
-
-      {/* <Topbar />
-      <Home /> */}
-
-      <Auth />
-
-      {/* <div className="input">
-        
-        <h3>Add Trip</h3>
-        <input type='text' name='name' onChange={(e) => { setName(e.target.value) }} />
-
-
-        <div >
-          <Button variant="outline-primary" onClick={addTrip}>Add</Button>
-          <Button variant="outline-primary" onClick={addTrip}>Image</Button>
-        </div>
-
-        <div className='layer'>{renderTrip()}</div>
-      </div> */}
-
-
-
-
-    </div >
+    <div >
+      <div className="bgd">
+        <Auth />
+      </div>
+    </div>
   );
 }
 export default App;

@@ -7,9 +7,8 @@ const Avg = (props) => {
     const { imgUrl } = props
 
     return (
-        <div>
+        <div >
             <Topbar />
-
             <img src={imgUrl} width='350' height='230' />
         </div>
     )

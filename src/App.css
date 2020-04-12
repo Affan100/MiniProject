@@ -46,3 +46,13 @@
 .input{
   padding: 10px;
 }
+
+.bgd{
+  background:  url("https://preppywallpapers.com/wp-content/uploads/2018/08/Pastel-iPhone-Wallpaper-1.jpg");
+  background-size: 80vmax;
+  height: 720px;
+}
+
+/* .auth{
+margin-top: 150px;
+} */

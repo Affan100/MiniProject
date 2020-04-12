@@ -1,10 +1,6 @@
-.login{
-
-}
 
 .logout{
-    margin: auto;
-    margin-left: 10px;
+    margin-left: 720px;
 }
 .email{
     margin-left: 5px;
@@ -18,24 +14,19 @@
     background-color: lavender;
 }
 
-
-
-.auth{
-    margin: 12%;
-}
 .text{
-    margin-left: 47%;
+    text-align: center;
 }
 
 .tap{
-    margin-left: 25px;
-    font-size: 30px;
+    margin-left: 15px;
+    font-size: 25px;
 }
 
 .berM{
     margin-left: 1100px;
     display: flex;
-    margin-top: 10px;
+    margin-top: 5px;
 }
 .berH{
 margin-left: 20px;
