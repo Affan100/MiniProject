@@ -4,6 +4,7 @@ import { BrowserRouter as Link } from 'react-router-dom';
 import Auth from './Auth';
 import './Auth.css';
 
+
 const Topbar = () => {
 
     return (
@@ -20,6 +21,7 @@ const Topbar = () => {
                     <ul class="navbar-nav mr-auto">
 
                         <nav variant="pills" defaultActiveKey="/HomePage">
+
                             <li class="nav-item active">
                                 <div className="tap">
                                     <Link to='/HomePage'>
@@ -30,24 +32,26 @@ const Topbar = () => {
                             </li>
                         </nav>
 
-                        <li class="nav-item active">
+                        <div className='berM'>
+                            <li class="nav-item active">
+                                <Link to='/App_Your_Trip'>
+                                    <a class="nav-link" href="App_Your_Trip">MoreTrip</a>
+                                </Link>
 
-                            <Link to='/App_Your_Trip'>
-                                <a class="nav-link" href="App_Your_Trip">MoreTrip</a>
-                            </Link>
+                            </li>
+                            <div className='berH'>
+                                <li class="nav-item active">
+                                    <Link to='/Hot_Trip'>
+                                        <a class="nav-link " href="Hot">Hot_trip</a>
+                                    </Link>
+                                </li>
+                            </div>
+                        </div>
 
-                        </li>
-
-                        <li class="nav-item active">
-
-                            <Link to='/Hot_Trip'>
-                                <a class="nav-link " href="Hot">Hot_trip</a>
-                            </Link>
-
-                        </li>
                     </ul>
 
-                    <Auth />
+
+                    {/* <Auth /> */}
 
                     {/* <form class="form-inline my-2 my-lg-0">
                         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />

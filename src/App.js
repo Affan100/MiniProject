@@ -3,12 +3,14 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 // import Home from './component/Home';
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
+import { Button } from 'react-bootstrap';
 // import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 // import firebase from 'firebase';
 
 
 //Auth Facebook
 import Auth from './component/Auth';
+import Avg from './component/Avg';
 
 // Top
 import Topbar from './component/Topbar';
@@ -23,22 +25,30 @@ const App = () => {
 
   const [main, setMain] = useState(false);
 
+  const imgUrlArray = [];
+  const [imgUrl, setImgUrl] = useState('');
+
+
+
 
   return (
     <div>
-
-      <Router>
+      {/* <Router>
         <Switch>
           <Route path="/HomePage" component={HomePage} />
           <Route path="/App_Your_Trip" component={addinput} />
           <Route path="/Hot" component={toptrip} />
           <Topbar />
         </Switch>
-      </Router>
+      </Router> */}
+
+      {/* <Avg imgUrl={imgUrlArray} /> */}
 
       {/* <Topbar />
       <Home /> */}
-      {/* <Auth /> */}
+
+      <Auth />
+
       {/* <div className="input">
         
         <h3>Add Trip</h3>
@@ -56,7 +66,7 @@ const App = () => {
 
 
 
-    </div>
+    </div >
   );
 }
 export default App;

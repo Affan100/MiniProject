@@ -11,10 +11,10 @@ const Addinput = () => {
     const [trips, setTrip] = useState([
 
         {
-            id: 1, location: 'Pakistan', detail: ''
+            id: 1, location: 'Pakistan', detail: '', imgUrl: '', link: ''
         },
         {
-            id: 2, nalocationme: 'Thailand', detail: ''
+            id: 2, nalocationme: 'Thailand', detail: '', imgUrl: '', link: ''
         }
 
     ])
