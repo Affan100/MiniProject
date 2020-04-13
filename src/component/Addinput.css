@@ -14,11 +14,10 @@
     margin-bottom: 10px;
 }
 
-.inputfrom{
-    display: flex;
-}
 .layer{
-    width: 500px;
+    width: 900px;
+    /* flex-direction: column; */
+
 }
 .details{
     margin-left: 30px;

@@ -5,7 +5,7 @@ import { Button } from 'react-bootstrap';
 
 export default (props) => {
 
-    const { trip, editTrip, deleteTrip } = props
+    const { trip, editTrip, deleteTrip, setCountLink, CountLink } = props
     const { id, location, detail, imgUrl, link } = trip
 
 
@@ -25,8 +25,7 @@ export default (props) => {
                 <Button className='edit' variant="outline-primary" onClick={() => editTrip(id)}>Edit</Button>
                 <Button className='dele' variant="outline-danger" onClick={() => deleteTrip(id)}>Delete</Button>
                 <div className='link'>
-                    <Button href={link} variant="outline-warning">Link</Button>
-
+                    <Button /*href={link}*/ variant="outline-warning" onClick={() => setCountLink([...CountLink, id])}>Link</Button>
                 </div>
             </div>
         </div>

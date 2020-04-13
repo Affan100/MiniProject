@@ -76,11 +76,11 @@ const Auth = props => {
 
                     <div id='home'><Home /></div>
                     <div id='moretrip'> <Addinput /></div>
-                    <div id='hot'><Avg /></div>
+                    {/* <div id='hot'><Avg /></div> */}
 
-                    <span className='logout'>
+                    {/* <span className='logout'>
                         <Button variant="danger" onClick={() => firebase.auth().signOut()}>Logout</Button>
-                    </span>
+                    </span> */}
 
                     {/* </div> */}
                 </div>)
@@ -88,6 +88,7 @@ const Auth = props => {
                 :
 
                 (<div>
+                    <div className="web"><h4>Dairly Web</h4></div>
                     <div className='text'>Plase login</div>
                     <StyledFirebaseAuth
                         uiConfig={uiConfig}

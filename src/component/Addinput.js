@@ -5,6 +5,7 @@ import Trip from '../Trip';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button, InputGroup, FormControl } from 'react-bootstrap';
 import './Addinput.css';
+import Avg from './Avg';
 
 const Addinput = () => {
 
@@ -18,17 +19,21 @@ const Addinput = () => {
         }
 
     ])
-
     const [location, setLocation] = useState('');
     const [detail, setDetail] = useState('');
     const [imgUrl, setImgUrl] = useState('');
     const [link, setLink] = useState('');
+    const [CountLink, setCountLink] = useState([]);
+    const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+
+    let Zero = [{ num: 0, arrayIndex: 1 }, { num: 0, arrayIndex: 2 }, { num: 0, arrayIndex: 3 }, { num: 0, arrayIndex: 4 }, { num: 0, arrayIndex: 5 }];
 
     useEffect(() => {
         retriveData()
     }, [])
 
-
+    let MaxArray = [];
+    console.log(CountLink)
     const retriveData = () => {
 
         firestore.collection('trip').onSnapshot((snapshot) => {
@@ -59,7 +64,8 @@ const Addinput = () => {
                         <Trip key={index} trip={trips}
                             deleteTrip={deleteTrip}
                             editTrip={editTrip}
-
+                            setCountLink={setCountLink}
+                            CountLink={CountLink}
                         />
                     )
                 })
@@ -71,9 +77,22 @@ const Addinput = () => {
 
     const addTrip = () => {
         let id = trips.length > 0 ? +trips[trips.length - 1].id + 1 : 1;
-        firestore.collection('trip').doc(id + ('')).set({ id, location, detail, imgUrl, link })
+        if (id <= 8) {
+            firestore.collection('trip').doc(id + ('')).set({ id, location, detail, imgUrl, link })
+        }
+
     }
 
+    let LOOP = []
+    const FindMaxtoMin = () => {
+        // Zero.num.sort(function (a, b) { return b - a });
+        Zero.map((data, index) => {
+            // data.num.sort(function (a, b) { return b - a });
+            LOOP.push(data.num)
+        })
+        console.log(LOOP)
+
+    }
     return (
         <div>
             <Topbar />
@@ -156,6 +175,26 @@ const Addinput = () => {
                 </div>
 
                 <div className='layer'>{renderTrip()}</div>
+
+
+
+                <div>
+                    {
+                        CountLink.map((data, index) => {
+                            arr.map((data2, index2) => {
+                                if (data === data2) {
+                                    Zero[index2].num = Zero[index2].num + 1
+                                    console.log(Zero)
+                                }
+                            })
+                        })
+                    }
+                    <div id='hot'>< Avg Zero={Zero} CountLink={CountLink} trips={trips} /></div>
+                </div>
+                <div>
+                    <button onClick={FindMaxtoMin}>Max</button>
+                </div>
+
 
             </div>
         </div >

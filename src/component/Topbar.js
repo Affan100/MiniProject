@@ -1,8 +1,9 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Button } from 'react-bootstrap';
 import React, { Component } from 'react';
-import { BrowserRouter as Link } from 'react-router-dom';
-import Auth from './Auth';
 import './Auth.css';
+import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
+import firebase from 'firebase';
 
 
 const Topbar = () => {
@@ -10,7 +11,7 @@ const Topbar = () => {
     return (
         <div>
 
-            <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
 
                 {/* <a class="navbar-brand" href="/">AFFORFUN</a> */}
 
@@ -30,7 +31,7 @@ const Topbar = () => {
                                     </Link> */}
 
 
-                                    <a href='#home' class="flex-sm-fill text-sm-center nav-link active " >Home <span class="sr-only">(current)</span></a>
+                                    <a href='#home' class="flex-sm-fill text-sm-center nav-link active " >HOME <span class="sr-only">(current)</span></a>
 
 
                                 </div>
@@ -50,16 +51,21 @@ const Topbar = () => {
                             </li>
                             <div className='berH'>
                                 <li >
-                                    {/* <Link to='/Hot_Trip'>
-                                        <a class="nav-link " href="Hot">Hot_trip</a>
-                                    </Link> */}
-
                                     <div >
                                         <a class="nav-link active" href="#hot">Hot_trip</a>
                                     </div>
 
                                 </li>
                             </div>
+
+                            <div className="user">
+                                <img alt='profile picture' className='img' width='50px' src={firebase.auth().currentUser.photoURL} />
+                                <span className='email'>{firebase.auth().currentUser.email}</span>
+                            </div>
+                            <span className='logout'>
+                                <Button variant="danger" onClick={() => firebase.auth().signOut()}>Logout</Button>
+                            </span>
+
                         </div>
 
                     </ul>

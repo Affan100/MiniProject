@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-// import Home from './component/Home';
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
-import { Button } from 'react-bootstrap';
+import { Button, Carousel } from 'react-bootstrap';
 // import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 // import firebase from 'firebase';
 
@@ -14,13 +12,6 @@ import Avg from './component/Avg';
 
 // Top
 import Topbar from './component/Topbar';
-
-//Router
-import HomePage from './component/HomePage';
-import addinput from './component/Addinput';
-import toptrip from './component/Avg';
-
-import Addinput from './component/Addinput';
 
 
 const App = () => {
@@ -34,10 +25,18 @@ const App = () => {
 
 
   return (
-    <div >
-      <div className="bgd">
-        <Auth />
-      </div>
+    <div>
+      {/* <Carousel>
+        <img
+          src="https://image.freepik.com/free-vector/grey-white-abstract-background-modern-design_42421-314.jpg"
+          height="720"
+          width='1600' />
+        <Carousel.Caption> */}
+      <div className="auth" ><Auth /></div>
+      {/* </Carousel.Caption>
+      </Carousel> */}
+
+
     </div>
   );
 }

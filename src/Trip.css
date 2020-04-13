@@ -12,10 +12,6 @@
     flex-direction: row;
 }
 
-
-.edit{
-   
-}
 .dele{
     margin-left: 10px;
 }
@@ -30,9 +26,6 @@
     position: absolute;
     right: 4px;
     top: 2px;
-}
-.url{
-    
 }
 .name{
     margin-left: 20px;

@@ -1,10 +1,11 @@
 
 .logout{
-    margin-left: 720px;
+    margin-top: 5px;
+    margin-left: 10px;
 }
 .email{
     margin-left: 5px;
-    color: lavender;
+    color: #2E2E2E;
 }
 .img{
     border-radius: 50%;
@@ -16,18 +17,30 @@
 
 .text{
     text-align: center;
+    color: #2E2E2E;
 }
 
 .tap{
     margin-left: 15px;
     font-size: 25px;
+    color: #2E2E2E;
 }
 
 .berM{
-    margin-left: 1100px;
+    /* margin-left: 1100px; */
     display: flex;
-    margin-top: 5px;
+    /* margin-top: 5px; */
+    margin-top: 9px;
 }
-.berH{
-margin-left: 20px;
+.user{
+    margin-left: 820px;
+}
+.web{
+    color: #2E2E2E;
+    text-align: left;
+    margin-bottom: 120px;
+    margin-right: 800px;
+}
+h4{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
