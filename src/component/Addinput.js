@@ -1,6 +1,6 @@
 import Topbar from './Topbar';
 import React, { useState, useEffect } from 'react';
-import { firestore } from '../index';
+import { firestore } from '../config/firebase';
 import Trip from '../Trip';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button, InputGroup, FormControl } from 'react-bootstrap';
@@ -149,33 +149,13 @@ const Addinput = () => {
                         </td>
                     </tr>
 
-
-
-                    {/* <tr>
-                        URL Image:<td><input type='text' name='name' onChange={(e) => { setLocation(e.target.value) }} /></td>
-                    </tr>
-                    <tr>
-                        Location    :<td><input type='text' name='name' onChange={(e) => { setLocation(e.target.value) }} /></td>
-                    </tr>
-                    <tr>
-                        Detail :<td><input type='text' onChange={(e) => { setDetail(e.target.value) }} /></td>
-                    </tr>
-                    <tr>
-                        Airlines    :<td><input type='text' name='name' onChange={(e) => { setLocation(e.target.value) }} /></td>
-                    </tr> */}
-
-
-
-
-
                     <div >
-                        <Button variant="outline-primary" onClick={addTrip}>Add</Button>
+                        <button type="button" class="btn btn-outline-primary" onClick={addTrip}>Add</button>
                         {/* <Button variant="outline-primary" onClick={addTrip}>Image</Button> */}
                     </div>
                 </div>
 
                 <div className='layer'>{renderTrip()}</div>
-
 
 
                 <div>

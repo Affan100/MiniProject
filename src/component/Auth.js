@@ -2,34 +2,13 @@ import React, { useState, useEffect } from 'react';
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 import firebase from 'firebase';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button } from 'react-bootstrap';
 import './Auth.css';
 import Home from './Home';
-// import Home from './Home';
-
-// Top
-import Topbar from './Topbar';
-
-// Page Route
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
-import HomePage from './HomePage';
-import addinput from './Addinput';
-import toptrip from './Avg';
-
 
 import Addinput from './Addinput';
-import Avg from './Avg';
+import Login from './Login'
 
 
-
-firebase.initializeApp({
-    apiKey: "AIzaSyABkAvfQINIRpudOhg3Znj2UA76Ff_RIv0",
-    authDomain: "mini-project-2755f.firebaseapp.com",
-    projectId: "mini-project-2755f"
-})
-
-
-// class Auth extends Component {
 const Auth = props => {
 
     const [isSignedIn, setIsSignedIn] = useState(false);
@@ -39,8 +18,7 @@ const Auth = props => {
         signInOptions: [
             firebase.auth.FacebookAuthProvider.PROVIDER_ID,
             firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-            firebase.auth.GithubAuthProvider.PROVIDER_ID,
-            firebase.auth.EmailAuthProvider.PROVIDER_ID
+            firebase.auth.GithubAuthProvider.PROVIDER_ID
         ],
         callback: {
             signInSuccessUrl: () => false
@@ -73,9 +51,9 @@ const Auth = props => {
                         </Switch>
                     </Router> */}
 
-
                     <div id='home'><Home /></div>
                     <div id='moretrip'> <Addinput /></div>
+
                     {/* <div id='hot'><Avg /></div> */}
 
                     {/* <span className='logout'>
@@ -83,13 +61,25 @@ const Auth = props => {
                     </span> */}
 
                     {/* </div> */}
+
                 </div>)
 
                 :
 
                 (<div>
-                    <div className="web"><h4>Dairly Web</h4></div>
-                    <div className='text'>Plase login</div>
+                    <div className="web">
+                        <img src="https://cdn1.iconfinder.com/data/icons/travel-line-good-life/512/map-512.png" width='60' height='60' />
+                        <div style={{ marginLeft: 10 }}>
+                            <h4>Travel Diaries Web</h4>
+                            <h6>บันทึกการท่องเที่ยวด้วยมือคุณ</h6>
+                        </div>
+                    </div>
+
+                    {/* <div className='text'>Plase login</div> */}
+                    <div className='sign'><Login /></div>
+
+                    <div className="OR">OR</div>
+
                     <StyledFirebaseAuth
                         uiConfig={uiConfig}
                         firebaseAuth={firebase.auth()}
