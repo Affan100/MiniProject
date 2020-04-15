@@ -2,7 +2,8 @@ import React from 'react';
 import './Home.css'
 import { Carousel } from 'react-bootstrap';
 import Topbar from './Topbar';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Button } from 'react-bootstrap';
 
 const Home = () => {
 
@@ -22,33 +23,52 @@ const Home = () => {
                     <Carousel.Caption>
                         <h3>Thailand Trip</h3>
                         <p>Arrived Bangkok. Had no problems finding where to get cab on the first floor, no problems with the cab driver.</p>
+                        <Button variant="outline-primary" href='http://www.thailand-guide.com/'>More</Button>
                     </Carousel.Caption>
                 </Carousel.Item>
 
                 <Carousel.Item>
-                    <img
+                    <div ><img
                         className="d-block w-100"
-                        src="https://www.planet-ride.com/wp-content/uploads/2017/03/ka2.jpg"
+                        src="https://f.ptcdn.info/319/056/000/p4n3k4kvy6x5zDvh08A-o.jpg"
                         height="650"
-                        alt="First slide" />
+                        alt="First slide" /></div>
                     <Carousel.Caption>
                         <h3>Pakistan Trip</h3>
                         <p>In 2019, the authorities tightened their control over freedom of expression.</p>
+                        <Button variant="outline-info" href='https://pantip.com/topic/37405007'>More</Button>
                     </Carousel.Caption>
                 </Carousel.Item>
 
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
-                        src="https://www.jatiewpainai.com/wp-content/uploads/2019/11/IMG_1865-2.jpg"
+                        src="https://www.eatchillwander.com/wp-content/uploads/2018/05/dubai-cover.jpg"
                         height="650"
                         alt="Third slide" />
 
                     <Carousel.Caption>
                         <h3>Dubai Trip</h3>
                         <p>  Dubai Desert Safari With Quad Biking At Red Dunes Lahbab Desert.</p>
+                        <Button variant="outline-warning" href='https://paidonnnn.com/tag/%E0%B9%80%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%A7%E0%B8%94%E0%B8%B9%E0%B9%84%E0%B8%9A-%E0%B9%81%E0%B8%95%E0%B9%88%E0%B8%87%E0%B8%95%E0%B8%B1%E0%B8%A7%E0%B8%A2%E0%B8%B1%E0%B8%87%E0%B9%84%E0%B8%87/'>More</Button>
                     </Carousel.Caption>
                 </Carousel.Item>
+
+                <Carousel.Item>
+                    <img
+                        className="d-block w-100"
+                        src="https://cdn.shortpixel.ai/client/q_glossy,ret_img,w_1000/https://www.beartai.com/wp-content/uploads/2019/03/Malaysia-Cover.jpg"
+                        height="650"
+                        alt="four slide" />
+
+                    <Carousel.Caption>
+                        <h3>Malaysia Trip</h3>
+                        <p>Malaysia is a country that yields a rich mix of cultural attractions and rapidly expanding cities filled.</p>
+                        <Button variant="outline-success" href='http://www.visit-malaysia.com/'>More</Button>
+                    </Carousel.Caption>
+                </Carousel.Item>
+
+
             </Carousel>
         </div>
     );

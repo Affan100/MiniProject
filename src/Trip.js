@@ -25,7 +25,7 @@ export default (props) => {
                 <Button className='edit' variant="outline-primary" onClick={() => editTrip(id)}>Edit</Button>
                 <Button className='dele' variant="outline-danger" onClick={() => deleteTrip(id)}>Delete</Button>
                 <div className='link'>
-                    <Button /*href={link}*/ variant="outline-warning" onClick={() => setCountLink([...CountLink, id])}>Link</Button>
+                    <Button /*</div>href={link}*/ variant="outline-warning" onClick={() => setCountLink([...CountLink, id])}>Link</Button>
                 </div>
             </div>
         </div>

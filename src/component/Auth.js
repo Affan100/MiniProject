@@ -66,24 +66,23 @@ const Auth = props => {
 
                 :
 
-                (<div>
+                (<div >
                     <div className="web">
-                        <img src="https://cdn1.iconfinder.com/data/icons/travel-line-good-life/512/map-512.png" width='60' height='60' />
-                        <div style={{ marginLeft: 10 }}>
+                        <img src="https://cdn1.iconfinder.com/data/icons/travel-line-good-life/512/map-512.png" width='60' height='60' color='#ffffff' />
+                        <div style={{ marginLeft: 10 }} className='toptext'>
                             <h4>Travel Diaries Web</h4>
                             <h6>บันทึกการท่องเที่ยวด้วยมือคุณ</h6>
                         </div>
                     </div>
 
-                    {/* <div className='text'>Plase login</div> */}
                     <div className='sign'><Login /></div>
-
                     <div className="OR">OR</div>
-
                     <StyledFirebaseAuth
                         uiConfig={uiConfig}
                         firebaseAuth={firebase.auth()}
                     />
+                    <img className='bg' src='https://auth.gboxzi.com/image/login.png' width='300' height='300' />
+
                 </div>)
             }
         </div >

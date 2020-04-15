@@ -50,6 +50,10 @@
     text-align: left;
     margin-bottom: 50px;
     display: flex;
+    background-color:#ffffff;
+    width: 300px;
+    border-radius: 5%;
+    padding: 10px;
 }
 
 h4{
@@ -57,6 +61,9 @@ h4{
 }
 h6{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.toptext{
+    color: rgba(0, 0, 0, 0.9);
 }
 
 .sign{
@@ -69,4 +76,13 @@ h6{
     padding: 10px;
     text-align: center;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body{
+   background-image: url("https://www.jing.fm/clipimg/detail/259-2590512_clouds-texture-png-realistic-transparent-background-clouds-png.png" ); 
+}
+
+.bg{
+   margin-left: 950px;
+   margin-top: -700px;
 }
