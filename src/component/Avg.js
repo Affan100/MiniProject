@@ -15,7 +15,7 @@ const Avg = (props) => {
         <div >
             <Topbar />
             {/* <img src={imgUrl} width='350' height='230' /> */}
-            <div className='con'>
+            {/* <div className='con'>
                 <div style={{ marginTop: 10, padding: 20 }}>
                     <img src='https://f.ptcdn.info/337/036/000/1444637082-cover3-o.jpg' width='350' height='230' />
 
@@ -43,7 +43,7 @@ const Avg = (props) => {
 
                     </div>
                 </div>
-            </div>
+            </div> */}
 
         </div>
     )
