@@ -19,20 +19,19 @@
 }
 
 .tap{
+    margin-top: 10px;
     margin-left: 15px;
-    font-size: 25px;
+    font-size: 20px;
     color: #2E2E2E;
 }
 
 .berM{
-    /* margin-left: 1100px; */
     display: flex;
-    /* margin-top: 5px; */
-    margin-top: 9px;
+    margin-top: 14px;
 }
 
 .user{
-    margin-left: 820px;
+    margin-left: 770px;
 }
 .logout{
     margin-top: 5px;
@@ -44,6 +43,7 @@
     justify-content: flex-end;
 
 }
+
 
 .web{
     color: #2E2E2E;
@@ -80,6 +80,7 @@ h6{
 
 body{
    background-image: url("https://www.jing.fm/clipimg/detail/259-2590512_clouds-texture-png-realistic-transparent-background-clouds-png.png" ); 
+
 }
 
 .bg{

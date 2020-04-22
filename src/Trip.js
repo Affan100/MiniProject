@@ -10,22 +10,23 @@ export default (props) => {
 
 
     return (
-        <div className='li' >
-
-            <div className='url'>
-                <img src={imgUrl} width='350' height='230' />
+        <div className='wrap'>
+            <div className='li' >
+                <div className='url'>
+                    <img src={imgUrl} width='350' height='230' />
+                </div>
+                <div className='name'>
+                    {location} :
             </div>
-            <div className='name'>
-                {location} :
-            </div>
-            <div className='detail'>
-                {detail}
-            </div>
-            <div className='container'>
-                <Button className='edit' variant="outline-primary" onClick={() => editTrip(id)}>Edit</Button>
-                <Button className='dele' variant="outline-danger" onClick={() => deleteTrip(id)}>Delete</Button>
-                <div className='link'>
-                    <Button /*</div>href={link}*/ variant="outline-warning" onClick={() => setCountLink([...CountLink, id])}>Link</Button>
+                <div className='detail'>
+                    {detail}
+                </div>
+                <div className='container'>
+                    <Button className='edit' variant="outline-primary" onClick={() => editTrip(id)}>Edit</Button>
+                    <Button className='dele' variant="outline-danger" onClick={() => deleteTrip(id)}>Delete</Button>
+                    <div className='link'>
+                        <Button href={link} variant="outline-warning" onClick={() => { }}>Link</Button>
+                    </div>
                 </div>
             </div>
         </div>

@@ -7,7 +7,7 @@ import Home from './Home';
 
 import Addinput from './Addinput';
 import Login from './Login'
-
+import Avg from './Avg';
 
 const Auth = props => {
 
@@ -37,30 +37,9 @@ const Auth = props => {
             {isSignedIn ?
                 (<div>
 
-                    {/* <div> */}
-                    {/* <img alt='profile picture' className='img' width='50px' src={firebase.auth().currentUser.photoURL} />
-                    <span className='email'>Welcome: {firebase.auth().currentUser.displayName}</span>
-                    <span className='email'>{firebase.auth().currentUser.email}</span> */}
-
-                    {/* <Router>
-                        <Switch>
-                            <Route path="/HomePage" component={HomePage} />
-                            <Route path="/App_Your_Trip" component={addinput} />
-                            <Route path="/Hot" component={toptrip} />
-                            <Topbar />
-                        </Switch>
-                    </Router> */}
-
                     <div id='home'><Home /></div>
                     <div id='moretrip'> <Addinput /></div>
-
-                    {/* <div id='hot'><Avg /></div> */}
-
-                    {/* <span className='logout'>
-                        <Button variant="danger" onClick={() => firebase.auth().signOut()}>Logout</Button>
-                    </span> */}
-
-                    {/* </div> */}
+                    <div id='hot'> <Avg /></div>
 
                 </div>)
 
@@ -74,7 +53,6 @@ const Auth = props => {
                             <h6>บันทึกการท่องเที่ยวด้วยมือคุณ</h6>
                         </div>
                     </div>
-
                     <div className='sign'><Login /></div>
                     <div className="OR">OR</div>
                     <StyledFirebaseAuth

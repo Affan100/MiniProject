@@ -16,26 +16,10 @@ import Topbar from './component/Topbar';
 
 const App = () => {
 
-  const [main, setMain] = useState(false);
-
-  const imgUrlArray = [];
-  const [imgUrl, setImgUrl] = useState('');
-
-
-
-
   return (
     <div>
-      {/* <Carousel>
-        <img
-          src="https://image.freepik.com/free-vector/grey-white-abstract-background-modern-design_42421-314.jpg"
-          height="720"
-          width='1600' />
-        <Carousel.Caption> */}
-      <div className="auth" ><Auth /></div>
-      {/* </Carousel.Caption>
-      </Carousel> */}
 
+      <div><Auth /></div>
 
     </div>
   );

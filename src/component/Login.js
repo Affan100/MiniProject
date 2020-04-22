@@ -46,7 +46,8 @@ const Login = () => {
                 <MDBRow>
                     <MDBCol md="15">
                         <form >
-                            <h4 className="h5 text-center mb-4">Sign up</h4>
+                            <img src='https://www.phuket.psu.ac.th/wp-content/uploads/2019/03/cropped-PSU_PHUKET-EN.png' width='200' height='70' />
+                            {/* <h4 className="h5 text-center mb-4">Sign up</h4> */}
                             <div className="grey-text">
 
                                 <MDBInput label="Your email" icon="envelope" group type="email" validate error="wrong"

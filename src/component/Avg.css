@@ -2,6 +2,43 @@
     display: flex;
 }
 .con{
-  /* display: flex;
-  grid-auto-rows: auto; */
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.call{
+    margin-top: 100px;
+    border-top: 4px solid #ee4d2d;
+    background-color: #59698d ;
+    color:white;
+    text-align: center;
+    justify-content: space-between;
+    align-items: flex-start;
+    display: -webkit-box;
+    display: flex;
+  
+}
+.block1{
+  padding: 20px;
+  display: block;
+  margin-top: 20px;
+}
+
+.block3{
+  padding: 20px;
+  display: block;
+  padding: 20px;
+  display: block;
+  font-family: "db_chuanpim_psurugular",sans-serif !important;
+
+}
+
+.block2{
+  padding: 20px;
+  display: block;
+  font-family: "db_chuanpim_psurugular",sans-serif !important;
+  font-size: 16px !important;
+  line-height: 1.6 !important;
+  text-align: start;
 }

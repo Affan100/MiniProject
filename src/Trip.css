@@ -3,9 +3,11 @@
     display: flex;
     flex-direction: column;
     width: 350px;
-    height: 450px;
+    height: 500px;
     margin: 0 16px 16px 0;
     box-shadow: 0 0 6px 0 rgba(0,0,0,0.15);
+    word-wrap: break-word;
+
 }
 .container{
     display: flex;
@@ -68,4 +70,8 @@
   
     background-color: rgb(255, 220, 154);
 
+}
+.wrap{
+    width: 400px;
+    height: 500px;
 }
