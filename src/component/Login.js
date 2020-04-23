@@ -5,12 +5,8 @@ import "bootstrap-css-only/css/bootstrap.min.css";
 import { Button } from 'react-bootstrap';
 import fb from "../config/firebase";
 
-// import firebase from 'firebase'
-// import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth'
-
 
 const Login = () => {
-
     const [imgUrl, setImgUrl] = useState('')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
@@ -47,7 +43,6 @@ const Login = () => {
                     <MDBCol md="15">
                         <form >
                             <img src='https://www.phuket.psu.ac.th/wp-content/uploads/2019/03/cropped-PSU_PHUKET-EN.png' width='200' height='70' />
-                            {/* <h4 className="h5 text-center mb-4">Sign up</h4> */}
                             <div className="grey-text">
 
                                 <MDBInput label="Your email" icon="envelope" group type="email" validate error="wrong"

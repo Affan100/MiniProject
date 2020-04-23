@@ -118,11 +118,11 @@ const Addinput = () => {
                     </tr>
 
                     <tr>
-                        Airlines :
+                        More :
                         <td>
                             <FormControl
                                 placeholder="Link"
-                                aria-label="Airlines"
+                                aria-label="More"
                                 aria-describedby="basic-addon1"
                                 onChange={(e) => setLink(e.target.value)} />
                         </td>
