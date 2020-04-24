@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './Avg.css';
 import Topbar from './Topbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { ProgressBar } from 'react-bootstrap';
+import { InputGroup } from 'react-bootstrap';
 import axios from 'axios'
 
 const Avg = () => {
@@ -32,14 +32,26 @@ const Avg = () => {
                 <div style={{ marginTop: 10, padding: 20 }}>
                     <img src='https://storage.googleapis.com/techsauce-prod/ugc/uploads/2020/3/Screen_Shot_2563-03-20_at_17.32.01.png' width='1180' height='500' />
 
-                    <div style={{ width: 1180, marginTop: 5 }}>
+                    <div style={{ width: 1180, marginTop: 10 }}>
                         <h3>เกาะติดสถานการณ์ COVID 19</h3>
-                        <h4>Confirmed :</h4>
+                        <h4>Confirmed </h4>
                         <h7>ยืนยันผู้ติดเชื้อทั่วโลก :</h7>
-                        <ProgressBar animated now={80} variant="warning" label={covid.confirmed} />
-                        <h4 style={{ marginTop: 7 }}>Deaths :</h4>
+                        <InputGroup.Text >
+                            <div className='font2'>
+                                <img src='https://image.flaticon.com/icons/png/512/1004/1004739.png' width='30' height='30' />
+                                <h3 style={{ marginLeft: 10 }}>{covid.confirmed} คน</h3>
+                            </div>
+                        </InputGroup.Text>
+
+                        <h4 style={{ marginTop: 7 }}>Deaths </h4>
                         <h7>เสียชีวิตทั่วโลก :</h7>
-                        <ProgressBar animated now={70} variant="danger" label={covid.deaths} />
+                        <InputGroup.Text >
+                            <div className='font2'>
+                                <img src='https://getdrawings.com/free-icon/skull-icon-png-56.png' width='34' height='34' />
+                                <h3 style={{ marginLeft: 10 }}>{covid.deaths} คน</h3>
+                            </div>
+                        </InputGroup.Text>
+
                     </div>
                 </div>
             </div>

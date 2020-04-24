@@ -3,10 +3,8 @@ import React, { useState, useEffect } from 'react';
 import { firestore } from '../config/firebase';
 import Trip from '../Trip';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button, InputGroup, FormControl } from 'react-bootstrap';
+import { InputGroup, FormControl } from 'react-bootstrap';
 import './Addinput.css';
-import Avg from './Avg';
-import axios from 'axios'
 
 const Addinput = () => {
 
@@ -24,17 +22,10 @@ const Addinput = () => {
     const [detail, setDetail] = useState('');
     const [imgUrl, setImgUrl] = useState('');
     const [link, setLink] = useState('');
-    // const [CountLink, setCountLink] = useState([]);
-    // const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
-
-    // let Zero = [{ num: 0, arrayIndex: 1 }, { num: 0, arrayIndex: 2 }, { num: 0, arrayIndex: 3 }, { num: 0, arrayIndex: 4 }, { num: 0, arrayIndex: 5 }];
 
     useEffect(() => {
         retriveData()
     }, [])
-
-    // let MaxArray = [];
-    // console.log(CountLink)
 
     const retriveData = () => {
 
@@ -57,7 +48,6 @@ const Addinput = () => {
         firestore.collection('trip').doc(id + '').set({ id, location, detail, imgUrl, link })
     }
 
-
     const renderTrip = () => {
         if (trips && trips.length)
             return (
@@ -66,8 +56,6 @@ const Addinput = () => {
                         <Trip key={index} trip={trips}
                             deleteTrip={deleteTrip}
                             editTrip={editTrip}
-                        // setCountLink={setCountLink}
-                        // CountLink={CountLink}
                         />
                     )
                 })
@@ -76,13 +64,11 @@ const Addinput = () => {
             return (<li>No Trip</li>)
 
     }
-
     const addTrip = () => {
         let id = trips.length > 0 ? +trips[trips.length - 1].id + 1 : 1;
         if (id <= 8) {
             firestore.collection('trip').doc(id + ('')).set({ id, location, detail, imgUrl, link })
         }
-
     }
 
     return (
@@ -90,9 +76,7 @@ const Addinput = () => {
             <Topbar />
             <div >
                 <div className="ADD">
-
                     <div className='topic'><InputGroup.Text > <div className='font'><h3>Add Trip</h3></div></InputGroup.Text></div>
-
                     <tr>
                         Location :
                         <td>
@@ -103,7 +87,6 @@ const Addinput = () => {
                                 onChange={(e) => { setLocation(e.target.value) }} />
                         </td>
                     </tr>
-
                     <tr>
                         <InputGroup.Prepend >
                             URL Image :
@@ -116,7 +99,6 @@ const Addinput = () => {
                                 onChange={(e) => { setImgUrl(e.target.value) }} />
                         </td>
                     </tr>
-
                     <tr>
                         More :
                         <td>
@@ -127,7 +109,6 @@ const Addinput = () => {
                                 onChange={(e) => setLink(e.target.value)} />
                         </td>
                     </tr>
-
                     <tr>
                         <InputGroup.Prepend>
                             Detail :
@@ -140,16 +121,13 @@ const Addinput = () => {
                                 onChange={(e) => { setDetail(e.target.value) }} />
                         </td>
                     </tr>
-
                     <div >
                         <button type="button" class="btn btn-outline-primary" onClick={addTrip}>Add</button>
                     </div>
                 </div>
-
                 <div>
                     <div className='layer'>{renderTrip()}</div>
                 </div>
-
             </div>
         </div >
     );

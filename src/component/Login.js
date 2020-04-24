@@ -1,5 +1,5 @@
-import React, { Component, useState, useEffect } from "react";
-import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBInput } from 'mdbreact';
+import React, { useState } from "react";
+import { MDBContainer, MDBRow, MDBCol, MDBInput } from 'mdbreact';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import "bootstrap-css-only/css/bootstrap.min.css";
 import { Button } from 'react-bootstrap';
